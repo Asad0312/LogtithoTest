@@ -1,0 +1,294 @@
+.editor-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.editor-body {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+.editor-stage {
+  flex: 1;
+  overflow: auto;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:
+    radial-gradient(circle, var(--border) 1px, transparent 1px) 0 0 / 22px 22px,
+    var(--bg);
+}
+
+.editor-notice {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  max-width: 640px;
+  width: 100%;
+  margin-bottom: 1rem;
+  background: var(--warning-soft);
+  border: 1px solid #f3dfb5;
+  color: var(--warning);
+  border-radius: 10px;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 550;
+  line-height: 1.45;
+  flex-shrink: 0;
+}
+
+.editor-notice strong {
+  color: #9a5a06;
+}
+
+.editor-zoom-wrap {
+  transform-origin: top center;
+  flex-shrink: 0;
+}
+
+.editor-loading,
+.editor-missing {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  color: var(--text-2);
+}
+
+.editor-missing {
+  margin: auto;
+  max-width: 420px;
+  text-align: center;
+  padding: 2.5rem 2rem;
+}
+
+.editor-missing svg {
+  color: var(--accent);
+}
+
+.editor-missing h2 {
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.editor-missing p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.editor-missing a {
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+/* ---------- document page ---------- */
+
+.doc-page {
+  position: relative;
+  box-shadow:
+    0 0 0 1px var(--border),
+    0 12px 40px rgba(15, 27, 51, 0.13);
+  overflow: hidden;
+}
+
+.doc-page-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  user-select: none;
+  pointer-events: none;
+}
+
+.text-el {
+  position: absolute;
+  white-space: pre-wrap;
+  word-break: break-word;
+  cursor: grab;
+  min-height: 1em;
+  outline: none;
+  user-select: none;
+}
+
+.text-el:active {
+  cursor: grabbing;
+}
+
+.text-el.is-selected {
+  z-index: 5;
+}
+
+.text-el-ring {
+  position: absolute;
+  inset: -4px;
+  border: 1.5px solid var(--accent);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.handle {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: #fff;
+  border: 1.5px solid var(--accent);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.handle-nw {
+  top: -8px;
+  left: -8px;
+}
+
+.handle-ne {
+  top: -8px;
+  right: -8px;
+}
+
+.handle-sw {
+  bottom: -8px;
+  left: -8px;
+}
+
+.handle-se {
+  bottom: -8px;
+  right: -8px;
+}
+
+.text-el.is-editing {
+  cursor: text;
+  user-select: text;
+  background: rgba(79, 70, 229, 0.05);
+  box-shadow: 0 0 0 1.5px var(--accent);
+  border-radius: 3px;
+  z-index: 6;
+}
+
+.editor-panel-wrap {
+  display: contents;
+}
+
+/* ---------- export dialog ---------- */
+
+.export-formats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+}
+
+.export-format {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  text-align: start;
+  border: 1.5px solid var(--border-strong);
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 0.9rem;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--text-2);
+}
+
+.export-format svg {
+  color: var(--text-3);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.export-format strong {
+  display: block;
+  color: var(--text);
+  font-size: 0.92rem;
+  margin-bottom: 0.2rem;
+}
+
+.export-format p {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.export-format.is-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.export-format.is-active svg {
+  color: var(--accent);
+}
+
+.export-check {
+  margin-inline-start: auto;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.export-name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.export-ext {
+  font-size: 0.88rem;
+  font-weight: 650;
+  color: var(--text-3);
+  background: var(--surface-3);
+  border-radius: 8px;
+  padding: 0.5rem 0.65rem;
+}
+
+.export-alert {
+  margin-top: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  border-radius: 10px;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.export-alert svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.export-alert-error {
+  background: var(--danger-soft);
+  border: 1px solid #f3b4b4;
+  color: var(--danger);
+}
+
+.export-alert-success {
+  background: var(--success-soft);
+  border: 1px solid #b5e3d0;
+  color: var(--success);
+}
+
+.export-note {
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  color: var(--text-3);
+  line-height: 1.6;
+}
+
+@media (max-width: 560px) {
+  .export-formats {
+    grid-template-columns: 1fr;
+  }
+
+  .editor-stage {
+    padding: 0.9rem;
+  }
+}

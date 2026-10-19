@@ -1,0 +1,79 @@
+/* Component-level shared styles live here; feature pages have their own files. */
+
+/* segmented control */
+.segmented {
+  display: inline-flex;
+  background: var(--surface-3);
+  border-radius: 10px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.segmented button {
+  border: none;
+  background: transparent;
+  padding: 0.35rem 0.65rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-2);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.segmented button:hover {
+  color: var(--text);
+}
+
+.segmented button.is-active {
+  background: var(--surface);
+  color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+/* card grid used by dashboard / settings */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* doc thumbnail */
+.doc-thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.doc-thumb-inner {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  transform-origin: top left;
+  background: #fff;
+  overflow: hidden;
+}
+
+[dir='rtl'] .doc-thumb-inner {
+  transform-origin: top right;
+}
+
+.doc-thumb-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.doc-thumb-el {
+  position: absolute;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow: hidden;
+}

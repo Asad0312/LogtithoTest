@@ -1,0 +1,209 @@
+.props-panel {
+  width: 296px;
+  flex-shrink: 0;
+  background: var(--surface);
+  border-inline-start: 1px solid var(--border);
+  padding: 1rem 1rem 2rem;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.props-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.props-head h3 {
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.props-head svg {
+  color: var(--accent);
+}
+
+.props-delete {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-2);
+  border-radius: 8px;
+  padding: 0.32rem;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.props-delete:hover {
+  color: var(--danger);
+  border-color: #f3b4b4;
+}
+
+.props-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.props-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.props-label {
+  font-size: 0.76rem;
+  font-weight: 650;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.props-static {
+  font-size: 0.86rem;
+  color: var(--text-2);
+}
+
+.props-textarea {
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  padding: 0.55rem 0.65rem;
+  font-size: 0.86rem;
+  color: var(--text);
+  resize: vertical;
+  min-height: 78px;
+  outline: none;
+  background: var(--surface);
+  line-height: 1.5;
+}
+
+.props-textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.props-select,
+.props-number {
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  border-radius: 9px;
+  padding: 0.42rem 0.55rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  outline: none;
+  width: 100%;
+}
+
+.props-select:focus,
+.props-number:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.props-number {
+  width: 68px;
+  font-variant-numeric: tabular-nums;
+}
+
+.props-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.props-range {
+  flex: 1;
+  accent-color: var(--accent);
+  min-width: 0;
+}
+
+.props-range-full {
+  width: 100%;
+}
+
+.props-color {
+  width: 40px;
+  height: 34px;
+  padding: 2px;
+  border: 1px solid var(--border-strong);
+  border-radius: 9px;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.props-swatches {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.props-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.props-swatch.is-active {
+  border-color: var(--text);
+  box-shadow: 0 0 0 2px var(--surface);
+}
+
+.props-check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.86rem;
+  color: var(--text-2);
+  cursor: pointer;
+}
+
+.props-check input {
+  accent-color: var(--accent);
+  width: 15px;
+  height: 15px;
+}
+
+.props-pos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.props-hint {
+  font-size: 0.8rem;
+  color: var(--text-3);
+  line-height: 1.6;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.7rem 0.8rem;
+}
+
+@media (max-width: 860px) {
+  .props-panel {
+    position: fixed;
+    bottom: 0;
+    inset-inline: 0;
+    width: 100%;
+    height: min(52vh, 420px);
+    border-inline-start: none;
+    border-top: 1px solid var(--border);
+    border-radius: 16px 16px 0 0;
+    box-shadow: var(--shadow-lg);
+    z-index: 80;
+    transform: translateY(105%);
+    transition: transform 0.2s ease;
+  }
+
+  .props-panel.is-open {
+    transform: translateY(0);
+  }
+}

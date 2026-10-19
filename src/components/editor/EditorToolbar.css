@@ -1,0 +1,179 @@
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.55rem 0.8rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.editor-toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.editor-title-input {
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 8px;
+  padding: 0.32rem 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 650;
+  color: var(--text);
+  max-width: 240px;
+  min-width: 120px;
+  outline: none;
+}
+
+.editor-title-input:hover {
+  border-color: var(--border);
+}
+
+.editor-title-input:focus {
+  border-color: var(--accent);
+  background: var(--surface);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.save-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.74rem;
+  font-weight: 650;
+  color: var(--text-3);
+  padding: 0.22rem 0.55rem;
+  border-radius: 99px;
+  background: var(--surface-3);
+  white-space: nowrap;
+}
+
+.save-pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--success);
+}
+
+.save-unsaved .save-pill-dot {
+  background: var(--warning);
+}
+
+.save-saving .save-pill-dot {
+  background: var(--accent);
+  animation: btn-spin 0.9s linear infinite;
+}
+
+.tool-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-2);
+  border-radius: 9px;
+  padding: 0.42rem;
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tool-btn:hover:not(:disabled) {
+  background: var(--surface-2);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.tool-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.tool-btn-wide {
+  padding: 0.42rem 0.6rem;
+}
+
+.tool-zoom {
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text-2);
+  border-radius: 9px;
+  padding: 0.4rem 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 650;
+  cursor: pointer;
+  min-width: 52px;
+  font-variant-numeric: tabular-nums;
+}
+
+.tool-zoom:hover {
+  color: var(--text);
+}
+
+.tool-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border);
+  margin: 0 0.3rem;
+}
+
+.tool-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.5rem 0.95rem;
+  font-size: 0.86rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.tool-primary:hover {
+  background: var(--accent-hover);
+}
+
+.tool-props-toggle {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .editor-toolbar-center {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: 0.35rem;
+    border-top: 1px solid var(--border);
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 860px) {
+  .tool-props-toggle {
+    display: inline-flex;
+  }
+
+  .editor-title-input {
+    max-width: 130px;
+  }
+
+  .save-pill {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .tool-btn-wide span {
+    display: none;
+  }
+}

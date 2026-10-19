@@ -1,0 +1,229 @@
+.upload-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.upload-main {
+  padding: 1.3rem;
+}
+
+.dropzone {
+  border: 2px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--surface-2);
+  padding: 3.4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.dropzone:hover {
+  border-color: var(--accent-border);
+  background: var(--accent-soft);
+}
+
+.dropzone.is-dragging {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.dropzone.has-error {
+  border-color: #f3b4b4;
+}
+
+.dropzone-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.dropzone-title {
+  font-size: 1.08rem;
+}
+
+.dropzone-desc {
+  margin-top: 0.3rem;
+  color: var(--text-2);
+  font-size: 0.9rem;
+}
+
+.dropzone-types {
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  font-weight: 650;
+  color: var(--text-3);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.75rem;
+  border-radius: 99px;
+}
+
+/* preview */
+
+.preview {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 1.2rem;
+}
+
+.preview-frame {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background:
+    conic-gradient(var(--surface-3) 0 25%, transparent 0 50%, var(--surface-3) 0 75%, transparent 0) 0 0 / 16px 16px,
+    var(--surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 320px;
+  max-height: 480px;
+}
+
+.preview-frame img {
+  max-height: 480px;
+  width: auto;
+  object-fit: contain;
+  background: #fff;
+}
+
+.preview-meta-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.preview-name {
+  font-size: 0.95rem;
+  font-weight: 650;
+  word-break: break-all;
+  line-height: 1.4;
+}
+
+.preview-remove {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-2);
+  border-radius: 8px;
+  padding: 0.3rem;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.preview-remove:hover {
+  color: var(--danger);
+  border-color: #f3b4b4;
+}
+
+.preview-facts {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-3);
+}
+
+.preview-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.upload-error {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--danger-soft);
+  border: 1px solid #f3b4b4;
+  color: var(--danger);
+  border-radius: var(--radius);
+  padding: 0.7rem 0.9rem;
+  font-size: 0.86rem;
+  font-weight: 550;
+}
+
+.upload-progress {
+  margin-top: 1.2rem;
+}
+
+.upload-actions {
+  margin-top: 1.4rem;
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+/* side column */
+
+.upload-side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.upload-side-card {
+  padding: 1.1rem 1.2rem;
+}
+
+.upload-side-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.55rem;
+}
+
+.upload-side-card ul {
+  margin: 0;
+  padding-inline-start: 1.1rem;
+  color: var(--text-2);
+  font-size: 0.85rem;
+  line-height: 1.85;
+}
+
+.upload-side-done {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+}
+
+.upload-side-done svg {
+  color: var(--success);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.upload-side-done p {
+  font-size: 0.85rem;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
+.spin {
+  animation: btn-spin 0.9s linear infinite;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@media (max-width: 960px) {
+  .upload-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .preview {
+    grid-template-columns: 1fr;
+  }
+}
