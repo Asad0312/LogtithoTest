@@ -13,7 +13,7 @@ import { makeId, getDocument, upsertDocument } from '../utils/storage.js'
 const DEFAULT_TEXT_STYLE = {
   fontFamily: 'Arial, "Segoe UI", Helvetica, sans-serif',
   fontSize: 16,
-  color: '#1c2740',
+  color: '#070c0f',
   bold: false,
   italic: false,
   align: 'left',

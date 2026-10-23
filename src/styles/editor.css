@@ -94,7 +94,7 @@
   position: relative;
   box-shadow:
     0 0 0 1px var(--border),
-    0 12px 40px rgba(15, 27, 51, 0.13);
+    0 12px 40px rgba(7, 12, 15, 0.12);
   overflow: hidden;
 }
 
@@ -167,7 +167,7 @@
 .text-el.is-editing {
   cursor: text;
   user-select: text;
-  background: rgba(79, 70, 229, 0.05);
+  background: rgba(78, 141, 27, 0.06);
   box-shadow: 0 0 0 1.5px var(--accent);
   border-radius: 3px;
   z-index: 6;

@@ -13,7 +13,7 @@ function text(id, x, y, width, text, style = {}) {
     style: {
       fontFamily: ARIAL,
       fontSize: 15,
-      color: '#1c2740',
+      color: '#070c0f',
       bold: false,
       italic: false,
       align: 'left',
@@ -37,7 +37,7 @@ export const FONT_CHOICES = [
   { label: 'Urdu Nastaliq', value: NASTALIQ_FONT },
 ]
 
-export const COLOR_PRESETS = ['#1c2740', '#4f46e5', '#0f766e', '#b91c1c', '#a16207', '#475569', '#7c3aed', '#000000']
+export const COLOR_PRESETS = ['#070c0f', '#4e8d1b', '#739c52', '#0f766e', '#b91c1c', '#a16207', '#475569', '#000000']
 
 function schoolNoticeDoc() {
   const created = '2026-10-12T09:20:00.000Z'
@@ -60,29 +60,29 @@ function schoolNoticeDoc() {
         fontSize: 26,
         bold: true,
         align: 'center',
-        color: '#101a30',
+        color: '#070c0f',
       }),
       text('s1_sub', 70, 106, 660, 'Main Campus, Garden Road  ·  Session 2025–26  ·  Office of the Principal', {
         fontSize: 13,
         italic: true,
         align: 'center',
-        color: '#556280',
+        color: '#667466',
       }),
       text('s1_line', 70, 140, 660, '──────────────────────────────', {
         fontSize: 12,
         align: 'center',
-        color: '#9aa6bd',
+        color: '#aab5a8',
       }),
       text('s1_title', 70, 176, 660, 'OFFICE NOTICE', {
         fontFamily: GEORGIA,
         fontSize: 22,
         bold: true,
         align: 'center',
-        color: '#101a30',
+        color: '#070c0f',
       }),
       text('s1_ref', 70, 226, 660, 'Ref: ANPS/PTM/2026/41                                      Date: 14 October 2026', {
         fontSize: 13,
-        color: '#33415c',
+        color: '#3e4b42',
       }),
       text('s1_sal', 70, 278, 660, 'Dear Parents and Guardians,', { fontSize: 15 }),
       text('s1_p1', 70, 318, 660, 'This is to inform you that the Parent–Teacher Meeting for Grades 1 to 5 will be held on Saturday, 25 October 2026, from 9:00 AM to 1:00 PM in the school main hall.', {
@@ -106,15 +106,15 @@ function schoolNoticeDoc() {
         fontSize: 17,
         align: 'center',
         dir: 'rtl',
-        color: '#1c2740',
+        color: '#070c0f',
       }),
       text('s1_sig', 430, 780, 300, 'Principal', { bold: true, align: 'right', fontSize: 15 }),
-      text('s1_sig2', 430, 810, 300, '( Mrs. Ayesha Rahman )', { align: 'right', fontSize: 14, color: '#33415c' }),
+      text('s1_sig2', 430, 810, 300, '( Mrs. Ayesha Rahman )', { align: 'right', fontSize: 14, color: '#3e4b42' }),
       text('s1_foot', 70, 1020, 660, 'Demo content for the Logrithoo prototype — this text was not produced by OCR.', {
         fontSize: 11,
         italic: true,
         align: 'center',
-        color: '#8792ab',
+        color: '#8a978b',
       }),
     ],
   }
@@ -148,7 +148,7 @@ function urduNoticeDoc() {
         fontSize: 18,
         align: 'center',
         dir: 'rtl',
-        color: '#475569',
+        color: '#4a5a4d',
       }),
       text('s2_p1', 90, 240, 620, 'تمام طلبہ و طالبات کو اطلاع دی جاتی ہے کہ سالانہ امتحانات 25 اکتوبر 2026 سے شروع ہوں گے۔', {
         fontFamily: NASTALIQ_FONT,
@@ -174,14 +174,14 @@ function urduNoticeDoc() {
       text('s2_en', 70, 600, 660, 'English summary: Annual examinations begin on 25 October 2026. The date sheet is on the notice board. Attendance is mandatory.', {
         fontSize: 12,
         italic: true,
-        color: '#64748b',
+        color: '#667466',
         lineHeight: 1.6,
       }),
       text('s2_foot', 70, 1020, 660, 'Prototype sample — Urdu layout uses a Nastaliq system font fallback.', {
         fontSize: 11,
         italic: true,
         align: 'center',
-        color: '#8792ab',
+        color: '#8a978b',
       }),
     ],
   }
@@ -212,7 +212,7 @@ function memoDoc() {
       text('s3_line', 70, 112, 660, '──────────────────────────────', {
         fontSize: 12,
         align: 'center',
-        color: '#9aa6bd',
+        color: '#aab5a8',
       }),
       text('s3_to', 70, 154, 660, 'To:            All Department Heads', { fontSize: 14 }),
       text('s3_from', 70, 184, 660, 'From:      Office of the Academic Director', { fontSize: 14 }),
@@ -234,12 +234,12 @@ function memoDoc() {
         lineHeight: 1.65,
       }),
       text('s3_sig', 430, 600, 300, 'Academic Director', { bold: true, align: 'right', fontSize: 15 }),
-      text('s3_sig2', 430, 630, 300, '( Dr. Imran Qureshi )', { align: 'right', fontSize: 14, color: '#33415c' }),
+      text('s3_sig2', 430, 630, 300, '( Dr. Imran Qureshi )', { align: 'right', fontSize: 14, color: '#3e4b42' }),
       text('s3_foot', 70, 1020, 660, 'Sample document bundled with the Logrithoo prototype.', {
         fontSize: 11,
         italic: true,
         align: 'center',
-        color: '#8792ab',
+        color: '#8a978b',
       }),
     ],
   }

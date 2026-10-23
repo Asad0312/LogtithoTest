@@ -128,8 +128,8 @@
   top: 0;
   bottom: 0;
   width: 12px;
-  background: rgba(15, 27, 51, 0.08);
-  border-inline-end: 1px solid rgba(15, 27, 51, 0.1);
+  background: rgba(7, 12, 15, 0.08);
+  border-inline-end: 1px solid rgba(7, 12, 15, 0.1);
 }
 
 .theme-light {
@@ -137,7 +137,7 @@
 }
 
 .theme-dim {
-  background: #eceff7;
+  background: #e9efe4;
 }
 
 .settings-langs {
